@@ -1,5 +1,5 @@
-import { Resolver, Query, Mutation, Args, Int} from '@nestjs/graphql';
-importy { UseGuards } from '@nestjs/graphql';
+import { Resolver, Query, Mutation, Args, Int } from '@nestjs/graphql';
+import { UseGuards } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { Product } from './models/product.model';
 import { ProductStats } from './models/product-stats.model';
