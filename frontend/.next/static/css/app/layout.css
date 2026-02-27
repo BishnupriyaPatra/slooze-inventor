@@ -1,0 +1,161 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/tailwindcss/base.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind base;
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/tailwindcss/components.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind components;
+
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/tailwindcss/utilities.css ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+@tailwind utilities;
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-card: #16161f;
+  --bg-input: #1c1c28;
+  --border: #2a2a3a;
+  --text-primary: #f0f0ff;
+  --text-secondary: #8080aa;
+  --accent: #7c6af7;
+  --accent-hover: #6a58e8;
+  --accent-glow: rgba(124, 106, 247, 0.3);
+  --danger: #f05d5d;
+  --success: #4ade80;
+  --warning: #fbbf24;
+}
+
+[data-theme='light'] {
+  --bg-primary: #f5f5ff;
+  --bg-secondary: #eeeef8;
+  --bg-card: #ffffff;
+  --bg-input: #f0f0fa;
+  --border: #ddddf0;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6060a0;
+  --accent: #6c5ce7;
+  --accent-hover: #5a4bd6;
+  --accent-glow: rgba(108, 92, 231, 0.2);
+  --danger: #e84040;
+  --success: #16a34a;
+  --warning: #d97706;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 0 20px var(--accent-glow);
+  transform: translateY(-1px);
+}
+
+.input-field {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-manager {
+  background: rgba(124, 106, 247, 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(124, 106, 247, 0.3);
+}
+
+.badge-keeper {
+  background: rgba(74, 222, 128, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+

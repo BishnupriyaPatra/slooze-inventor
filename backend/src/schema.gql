@@ -1,0 +1,69 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserType {
+  id: Float!
+  email: String!
+  name: String!
+  role: String!
+}
+
+type AuthResponse {
+  token: String!
+  user: UserType!
+}
+
+type Product {
+  id: Int!
+  name: String!
+  description: String
+  price: Float!
+  quantity: Int!
+  category: String!
+  sku: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type ProductStats {
+  totalProducts: Int!
+  totalValue: Float!
+  lowStock: Int!
+  categories: Int!
+}
+
+type Query {
+  products: [Product!]!
+  product(id: Int!): Product!
+  productStats: ProductStats!
+}
+
+type Mutation {
+  login(email: String!, password: String!): AuthResponse!
+  createProduct(input: CreateProductInput!): Product!
+  updateProduct(id: Int!, input: UpdateProductInput!): Product!
+  deleteProduct(id: Int!): Product!
+}
+
+input CreateProductInput {
+  name: String!
+  description: String
+  price: Float!
+  quantity: Int!
+  category: String!
+  sku: String!
+}
+
+input UpdateProductInput {
+  name: String
+  description: String
+  price: Float
+  quantity: Int
+  category: String
+}
