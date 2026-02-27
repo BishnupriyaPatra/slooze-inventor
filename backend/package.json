@@ -4,8 +4,7 @@
   "scripts": {
     "start:dev": "nest start --watch",
     "build": "nest build",
-    "start": "node dist/main",
-    "start:prod": "node dist/main"
+    "start": "node dist/main"
   },
   "dependencies": {
     "@nestjs/apollo": "^12.0.0",
