@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "start:dev": "nest start --watch",
-    "build": "nest build",
-    "start": "node dist/main"
+    "build": "node node_modules/@nestjs/cli/bin/nest.js build",
+    "prisma:generate": "node node_modules/prisma/build/index.js generate",
+    "prisma:migrate:deploy": "node node_modules/prisma/build/index.js migrate deploy",
+    "start": "node dist/main.js"
   },
   "dependencies": {
     "@nestjs/apollo": "^12.0.0",
