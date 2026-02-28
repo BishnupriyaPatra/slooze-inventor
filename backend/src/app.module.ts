@@ -12,6 +12,10 @@ import { PrismaModule } from './prisma/prisma.module';
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      // 🔽 yeh naya part hai
+      csrfPrevention: false,      // ab browser se direct call pe CSRF block nahi karega
+      introspection: true,        // tools / playground ke liye
+      playground: true,           // /graphql pe UI (optional but helpful)
       context: ({ req }) => ({ req }),
     }),
     PrismaModule,

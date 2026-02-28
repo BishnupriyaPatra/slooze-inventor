@@ -4,11 +4,9 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // 🔓 CORS: sab origin allow (abhi ke liye)
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      process.env.FRONTEND_URL || '',
-    ].filter(Boolean),
+    origin: true,        // <- '*' but smarter, sab allowed
     credentials: true,
   });
 
