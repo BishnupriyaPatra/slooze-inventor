@@ -6,7 +6,7 @@
     "build": "node node_modules/@nestjs/cli/bin/nest.js build",
     "prisma:generate": "node node_modules/prisma/build/index.js generate",
     "prisma:migrate:deploy": "node node_modules/prisma/build/index.js migrate deploy",
-    "start": "node dist/main.js"
+    "start": "node dist/src/main.js"
   },
   "dependencies": {
     "@nestjs/apollo": "^12.0.0",
